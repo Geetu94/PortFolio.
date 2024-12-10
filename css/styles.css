@@ -1,0 +1,404 @@
+/* Clearing default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Color :  Adobe Color, coolors, colorspace, colorhunt */
+/* Fonts : Google Fonts, CDN fonts  */
+
+/* Css Variables */
+:root {
+  --dark-100: #ddc9c9;
+  --dark-200: #292929;
+  --dark-300: #404040;
+  --dark-400: #585858;
+  --dark-500: #727272;
+  --dark-600: #120e0e;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--dark-100);
+  color: white;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(29, 26, 26);
+  font-size: larger;
+  font-weight: 900;
+  transition: all 0.3s ease-in;
+}
+
+/* Pseudo classes */
+a:hover {
+  color: var(--dark-500);
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #292929;
+}
+
+p {
+  font-size: 18px;
+  color: #120e0e;
+  text-align: justify;
+
+}
+
+.btn {
+  background-color: var(--dark-300);
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.btn:hover {
+  background-color: var(--dark-200);
+  color: white;
+}
+
+.header {
+  margin: 0 auto; /* Making the header center */
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 60px;
+  font-weight: 900;
+  color: #292929;
+}
+
+.header p {
+  text-align: center;
+  font-size: 18px;
+  color: #c7acac;
+}
+
+/* Header */
+header {
+  padding: 40px 40px;
+}
+
+
+.logo a {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.nav-menu a {
+  font-size: 24px;
+}
+
+/* Home */
+#home {
+  /* height: 600px; */
+  height: 70vh;
+  display: flex;
+}
+
+.left,
+.right {
+  width: 50%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(237, 240, 239); */
+  height: 100%;
+}
+
+.right {
+  height: 100%;
+  position: relative;
+}
+
+.right .card {
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.rotate-45,
+.rotate-minus-45 {
+  width: 600px;
+  height: 400px;
+  background-color: transparent;
+  border: 1px solid var(--dark-500);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+  filter: brightness(0.3);
+}
+
+.rotate-minus-45 {
+  transform: rotate(-55deg);
+  filter: brightness(0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 22px;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2px var(--dark-500);
+  color: transparent;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Projects */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  place-items: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 14px;
+  background-color: var(--dark-100);
+  border-radius: 20px;
+  padding: 20px 40px;
+  width: 350px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-image img {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-title {
+  font-size: 32px;
+}
+
+.project-desc {
+  font-size: 15px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #120e0e;
+  font-size: 17px;
+}
+
+.view-more-btn {
+  background-color: var(--dark-200);
+  padding: 10px 20px;
+  color: aliceblue;
+}
+
+/* Contact */
+#contact {
+  padding: 60px 0px;
+}
+
+.background {
+  background: url("../images/banner.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  filter: brightness(0.5);
+  width: 100%;
+  height: 500px;
+}
+
+/* Contact */
+
+#contact {
+  position: relative;
+}
+
+.contact-form {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: var(--dark-100);
+  border-radius: 7px;
+}
+
+.contact-form h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #120e0e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #292929;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  background-color: transparent;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--dark-500);
+  border-radius: 5px;
+  color: white;
+}
+
+textarea {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--dark-500);
+}
+
+.form-group button {
+  padding: 10px;
+  color: white;
+  width: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+}
+
+.form-group button:hover {
+  background-color: var(--dark-300);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1360px) {
+  #home {
+    padding: 60px 0px;
+  }
+
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    background: url(../images/project.jpg) no-repeat;
+    background-position: top;
+  }
+
+  .content {
+    width: 60%;
+    align-items: center;
+  }
+
+  .content p,
+  .content h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    width: 80%;
+  }
+}
+
+@media (max-width: 760px) {
+  .projects-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
